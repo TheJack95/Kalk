@@ -28,7 +28,6 @@ public:
   EuclideanVector* operator*(const BaseClass&) const; //prodotto scalare
   EuclideanVector* operator+(const BaseClass&) const;
   EuclideanVector* operator-(const BaseClass&) const;
-  EuclideanVector* operator=(const BaseClass&);
 };
 
 #endif // EUCLIDEANVECTOR_H

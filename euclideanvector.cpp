@@ -1,4 +1,6 @@
 #include "euclideanvector.h"
+#include <typeinfo>
+#include "exception.h"
 #include <iostream>
 #include <math.h>
 
@@ -50,12 +52,18 @@ double EuclideanVector::Angle(const EuclideanVector &v1, const EuclideanVector &
 
 EuclideanVector* EuclideanVector::operator+(const BaseClass &v) const
 {
+  if(typeid(*this) != typeid(v))
+    throw InvalidOperation();
+
   QPointF p(p1.x()+p2.x(),static_cast<const EuclideanVector&>(v).p1.y()+static_cast<const EuclideanVector&>(v).p2.y());
   return new EuclideanVector("result",p);
 }
 
 EuclideanVector* EuclideanVector::operator-(const BaseClass &v) const
 {
+  if(typeid(*this) != typeid(v))
+    throw InvalidOperation();
+
   QPointF p(p1.x()-p2.x(),static_cast<const EuclideanVector&>(v).p1.y()-static_cast<const EuclideanVector&>(v).p2.y());
   return new EuclideanVector("result",p);
 }
@@ -63,23 +71,21 @@ EuclideanVector* EuclideanVector::operator-(const BaseClass &v) const
 
 EuclideanVector* EuclideanVector::operator*(const BaseClass &v) const //prodotto scalare
 {
+  if(typeid(*this) != typeid(v))
+    throw InvalidOperation();
+
   return new EuclideanVector(this->dotProduct(static_cast<const EuclideanVector&>(v)),"DotProduct");
 }
 
 EuclideanVector* EuclideanVector::operator/(const BaseClass &v) //prodotto vettoriale
 {
+  if(typeid(*this) != typeid(v))
+    throw InvalidOperation();
+
   delete this;
   *this = EuclideanVector(length * static_cast<const EuclideanVector&>(v).length *
                              sin(Angle(*this,static_cast<const EuclideanVector&>(v))*M_PI/180),0,"Result");
   return this;
-}
-
-EuclideanVector* EuclideanVector::operator=(const BaseClass& b)
-{
-  if(this != &static_cast<const EuclideanVector&>(b))
-    {
-
-    }
 }
 
 QString EuclideanVector::print() const

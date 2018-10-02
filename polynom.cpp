@@ -1,5 +1,7 @@
 #include "polynom.h"
 #include <cstdlib>
+#include <typeinfo>
+#include "exception.h"
 #include <regex>
 using std::regex;
 
@@ -105,6 +107,9 @@ Polynom* Polynom::operator+(const BaseClass& p) const
 {
   Polynom a = static_cast<const Polynom&>(p);
 
+  if(typeid(*this) != typeid(p))
+    throw InvalidOperation();
+
   QVector<QPair<double,int>> aux;
   int j=0, k=0;
   while(j < list.size() && k < a.list.size())
@@ -155,6 +160,9 @@ Polynom* Polynom::operator-(const BaseClass& p) const
 {
   Polynom a = static_cast<const Polynom&>(p);
 
+  if(typeid(*this) != typeid(p))
+    throw InvalidOperation();
+
   return new Polynom(*(*(a * Polynom("-1","")) + *this ));
 
 }
@@ -173,6 +181,9 @@ Polynom Polynom::molt(const QPair<double,int>& term) const
 
 Polynom* Polynom::operator*(const BaseClass& p) const
 {
+  if(typeid(*this) != typeid(p))
+    throw InvalidOperation();
+
   Polynom *aux=new Polynom();
 
   for(int j=0; j<list.size(); ++j)
@@ -187,6 +198,9 @@ Polynom* Polynom::operator*(const BaseClass& p) const
 Polynom* Polynom::operator/(const BaseClass& p)
 {
   Polynom a = static_cast<const Polynom&>(p);
+
+  if(typeid(*this) != typeid(p))
+    throw InvalidOperation();
 
   if(list[0].second < a.list[0].second)
     {
