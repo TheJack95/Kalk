@@ -1,0 +1,27 @@
+POLINOMI	
+Ogni polinomio e' costriuto mediante monomi nella forma ax^b.
+"b", cioe' l'esponente DEVE essere un numeno intero positivo, 
+mentre "a", il coefficiente, puo' essere un numero qualunque.
+Ogni polinomio che viene salvato in memori DEVE essere identi
+ficato da un nome univoco che deve essere formato da una sola
+lettera: di conseguenza i polinomi salvabili in memoria sono 
+in totale 26.
+E' presenta una riga di input attraverso cui e' possibile ese
+guire operazioni con i polinomi presenti in memoria: non sara
+necessario riscrivere tutto il polinomio ma sara' sufficiente
+indicare il nome: ad esempio scrivendo a+b*c verranno sommati
+i polinomi a e b e il risultato verra' moltiplicato per c. 
+ATTENZIONE: le parentesi non sono supportate e la priorita' 
+delle operazioni non viene rispettata.
+
+VETTORI
+Un vettore, cioe' un segmento orintato viene costruito in tre
+possibili modi:
+  1. attraverso modulo, angolo e punto di applicazione;
+  2. attraverso solo modulo e angolo, il punto di applicazio
+     nem sara' l'origine;
+  3. attraverso due punti.
+Un punto e' identificcato attraverso le coordinate, inserite
+come segue: x,y 
+Per il salvataggio in memoria e il loro utilizzo valgono le 
+stesse regole dei polinomi.

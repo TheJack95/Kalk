@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KalkWindow</class>
+ <widget class="QMainWindow" name="KalkWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>678</width>
+    <height>477</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kalk</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="punto2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>388</y>
+      <width>81</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Point 2</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="output">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>8</y>
+      <width>551</width>
+      <height>341</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nomeInput">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>378</y>
+      <width>81</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Nome</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="divisione">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>108</y>
+      <width>93</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="salva">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>358</y>
+      <width>93</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SAVE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="esegui">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>438</y>
+      <width>93</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RUN</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="angolo">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>388</y>
+      <width>81</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Angle</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="operazioni">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>438</y>
+      <width>301</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Esegui operazioni con polinomi in memoria</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="moltiplicazione">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>71</y>
+      <width>93</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>*</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="somma">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>9</y>
+      <width>93</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="uguale">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>138</y>
+      <width>93</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>=</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="modulo">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>388</y>
+      <width>81</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Length</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="polyInput">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>358</y>
+      <width>451</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Inserisci il polinomio nella forma ax^b+... </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clear">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>228</y>
+      <width>93</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CLEAR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delMem">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>258</y>
+      <width>93</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DelMem</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="punto1">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>388</y>
+      <width>81</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Point  1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sottrazione">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>40</y>
+      <width>93</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

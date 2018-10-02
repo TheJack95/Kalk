@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/myFiles">
+        <file>guida</file>
+    </qresource>
+</RCC>

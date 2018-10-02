@@ -1,0 +1,52 @@
+package java.awt.geom;
+import java.lang.*;
+
+class EuclideanVector extends BaseClass {
+    private Point2D.Double p1 = new Point2D.Double();
+    private Point2D.Double p2;
+    private double length;
+    private double angle;
+
+    public EuclideanVector(double l, double a, Point2D.Double p, String n)
+    {
+	super(n);
+	p1 = p;
+	p2 = Double( Math.cos(Math.toRadiants(a))*l, Math.sin(Math.toRadiants(a))*l );
+	length = l;
+	angle = a;
+
+	if( Math.abs(a) == 90.0 || Math.abs(a) == 180.0)
+	    { p2 = Point2D.Double(0,l); }
+	else
+	    if (abs(a) == 0.0 || abs(a) == 360.0)
+	    { p2 = Double(l,0); }
+    }
+    public EuclideanVector(double l, double a, String n)
+    {
+        super(n);
+        p2 = Point2D.Double( Math.cos(Math.toRadiants(a))*l, Math.sin(Math.toRadiants(a))*l );
+        length = l;
+        angle = a;
+    }
+    public EuclideanVector(String n, Point2D.Double pa, Point2D.Double pb);
+    {
+        super(n);
+        p1 = pa;
+        p2 = pb;
+        length = Math.sqrt( Math.pow(p2.getX()-p1.getX(),2) + Math.pow(p2.getY()-p1.getY(),2) );
+        angle = Math.atan ((p2.getY()-p1.getY()) / (p2.getX()-p1.getX()) ).Math.toDegrees();
+
+    }
+    /*
+    public EuclideanVector(EuclideanVector v);
+    public EuclideanVector();
+    public String print();
+    public double getA() { return angle; }
+    public double getL() { return length; }
+    public static double Angle (EuclideanVector v1, EuclideanVector v2); //angolo tra due vettori
+    public EuclideanVector crossProduct(EuclideanVector); //prodotto vettoriale
+    public double dotProduct(const EuclideanVector&) const; //prodotto scalare
+    public EuclideanVector operator+(const EuclideanVector&) const;
+    public EuclideanVector operator-(const EuclideanVector&) const;
+    public EuclideanVector operator*(double);*/
+}
